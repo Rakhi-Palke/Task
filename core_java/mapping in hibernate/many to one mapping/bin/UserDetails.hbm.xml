@@ -1,0 +1,16 @@
+<?xml version=”1.0″?>
+<!DOCTYPE hibernate-mapping PUBLIC
+“-//Hibernate/Hibernate Mapping DTD 3.0//EN”
+“http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd”>
+
+<hibernate-mapping>
+<class name=”com.sdnext.hibernate.tutorial.dto.UserDetails” table=”USER”>
+<id name=”userId” type=”long” column=”ID” >
+<generator class=”assigned”/>
+</id>
+
+    <property name=”userName”>
+<column name=”UserName” />
+</property>
+</class>
+</hibernate-mapping>

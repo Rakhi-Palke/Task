@@ -1,0 +1,15 @@
+<?xml version=”1.0″?>
+<!DOCTYPE hibernate-mapping PUBLIC
+“-//Hibernate/Hibernate Mapping DTD 3.0//EN”
+“http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd”>
+
+<hibernate-mapping>
+<class name=”com.sdnext.hibernate.tutorial.dto.Vehicle” table=”VEHICLE”>
+<id name=”userId” type=”long” column=”ID” >
+<generator class=”assigned”/>
+</id>
+<property name=”vehicleName” column=”VEHICLE_NAME”>  </property>
+
+   <many-to-one name=”userDetail” class=”com.sdnext.hibernate.tutorial.dto.UserDetails” column=”USER_ID” cascade=”all” not-null=”true” />
+</class>
+</hibernate-mapping>
